@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2 class="logo">EVC System</h2>
             <ul class="nav-links">
                 <li><a href="index.php">Home</a></li>
+                <li><a href="send_money.php">Send Money</a></li> <!-- New Send Money Link -->
                 <li><a href="transactions.php">Transaction History</a></li>
             </ul>
         </div>
@@ -72,5 +73,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <p>No transactions found for <?php echo $phone; ?>.</p>
         <?php endif; ?>
     </div>
+
+     <!-- Include the footer -->
+     <?php include 'footer.php'; ?>
 </body>
 </html>

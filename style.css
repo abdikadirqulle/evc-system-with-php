@@ -1,3 +1,9 @@
+* {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
 /* General body styling */
 body {
   font-family: Arial, sans-serif;
@@ -130,4 +136,21 @@ td {
 
 th {
   background-color: #f2f2f2;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 2rem;
+  background-color: #32bb78; /* Footer background color */
+  color: white; /* Footer text color */
+  position: relative;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  font-size: 14px; /* Font size */
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+footer p {
+  margin: 0; /* Remove default margin */
 }

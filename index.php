@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple EVC System</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
      <!-- Navbar -->
@@ -31,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h2 class="logo">EVC System</h2>
             <ul class="nav-links">
                 <li><a href="index.php">Home</a></li>
+                <li><a href="send_money.php">Send Money</a></li> <!-- New Send Money Link -->
                 <li><a href="transactions.php">Transaction History</a></li>
             </ul>
         </div>
@@ -38,37 +40,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <div class="container">
 
-        <h1>Simple EVC System</h1>
+        <h1>Check Balance (Itus Hadhaaga)</h1>
 
-        <!-- Display message -->
+       <br />
+
+        <!-- Check Balance Form -->
+        <form method="POST" action="">
+            <input type="hidden" name="action" value="balance">
+            <!-- <br> -->
+            <label for="phone">Your Phone Number:</label>
+            <input type="text" name="phone" required>
+            <br>
+            <br>
+            <input type="submit" value="Check Balance">
+        </form>
+ <!-- Display message -->
         <?php if ($message): ?>
             <p class="message"><?php echo $message; ?></p>
         <?php endif; ?>
-
-        <!-- Check Balance Form -->
-        <h2>Check Balance</h2>
-        <form method="POST" action="">
-            <input type="hidden" name="action" value="balance">
-            <label for="phone">Your Phone Number:</label><br>
-            <input type="text" name="phone" required><br><br>
-            <input type="submit" value="Check Balance">
-        </form>
-
-        <!-- Send Money Form -->
-        <h2>Send Money</h2>
-        <form method="POST" action="">
-            <input type="hidden" name="action" value="send">
-            <label for="from_phone">Your Phone Number:</label><br>
-            <input type="text" name="from_phone" required><br>
-            
-            <label for="to_phone">Recipient's Phone Number:</label><br>
-            <input type="text" name="to_phone" required><br>
-
-            <label for="amount">Amount:</label><br>
-            <input type="number" name="amount" required><br><br>
-            
-            <input type="submit" value="Send Money">
-        </form>
     </div>
+
+     <!-- Include the footer -->
+     <?php include 'footer.php'; ?>
 </body>
 </html>
