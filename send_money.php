@@ -35,15 +35,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();
             $stmt->close();
 
-            echo "<p style='color: green;'>Money sent successfully!</p>";
+            $message = "<p style='color: green;'>Money sent successfully!</p>";
         } else {
-            echo "<p style='color: red;'>Insufficient balance.</p>";
+            $message = "<p style='color: red;'>Insufficient balance.</p>";
         }
     } else {
-        echo "<p style='color: red;'>Please fill in all fields.</p>";
+        $message = "<p style='color: red;'>Please fill in all fields.</p>";
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -104,6 +105,9 @@ label {
         <input type="number" id="amount" name="amount" step="0.01" required>
 
         <input type="submit" value="Send Money">
+
+        <?php if (isset($message)) echo $message; ?>
+
     </form>
 
      <!-- Include the footer -->
