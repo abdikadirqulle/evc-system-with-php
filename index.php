@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="container">
             <h2 class="logo">EVC System</h2>
             <ul class="nav-links">
-                <li><a href="index.php">Home</a></li>
+                <li><a href="index.php">Check Balance</a></li>
                 <li><a href="send_money.php">Send Money</a></li> <!-- New Send Money Link -->
                 <li><a href="transactions.php">Transaction History</a></li>
             </ul>
